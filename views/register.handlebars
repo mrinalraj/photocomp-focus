@@ -1,12 +1,38 @@
 <h2 class="page-header">Register</h2>
-{{#if errors}} {{#each errors}}
-<div class="alert alert-danger">{{msg}}</div>
-{{/each}} {{/if}}
+{{#if errors}}
+    {{#with errors.[0]}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/with}}
+{{/if}}
 <form method="post" action="/users/register">
     <div class="form-group">
         <label>Name</label>
-        <input type="text" class="form-control" placeholder="Name" name="name">
+        <input type="text" class="form-control" placeholder="Name" name="name" value={{name}}>
     </div>
-    
+    <div class="form-group">
+        <label>Year of Study</label>
+        <input type="text" class="form-control" placeholder="Year of study" name="year" value={{year}}>
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" class="form-control" placeholder="Phone number" name="phone" value={{phone}}>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" placeholder="Email" name="email" value={{email}}>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="password">
+    </div>
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="password2">
+    </div>
+    <div class="form-group">
+        <label>I accept terms and conditions* &nbsp;</label>
+        <input type="checkbox" class="" placeholder="Accept" name="accept">
+    </div>
+    <p>Terms and conditions specified here are mentioned on the home page. *</p>
     <button type="submit" class="btn btn-default">Submit</button>
 </form>

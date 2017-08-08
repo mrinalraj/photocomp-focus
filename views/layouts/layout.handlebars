@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Focus Production | Photo Competition</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -24,6 +25,18 @@
 
         <div class="row">
             <div class="col-lg-12">
+                {{#if success_msg}}
+                    <div class="alert alert-success">{{success_msg}}</div>
+                {{/if}}
+
+                {{#if error_msg}}
+                    <div class="alert alert-danger">{{error_msg}}</div>
+                {{/if}}
+
+                {{#if error}}
+                    <div class="alert alert-danger">{{error}}</div>
+                {{/if}}
+                
                 {{{body}}}
             </div>
         </div>
