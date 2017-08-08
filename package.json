@@ -1,0 +1,22 @@
+{
+  "name": "focus-photo-comp",
+  "version": "1.0.0",
+  "description": "photography competition focus productions",
+  "main": "index.js",
+  "repository": "github.com/mrinalraj/focus-photo-comp",
+  "author": "Mrinal Raj<github.com/mrinalraj>",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "dropbox": "^2.5.7",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "jade": "^1.11.0",
+    "mongodb": "^2.2.30",
+    "node-dropbox": "^0.1.8"
+  }
+}
