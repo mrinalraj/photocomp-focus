@@ -14,7 +14,7 @@ const express = require('express'),
     users = require(path.resolve(__dirname, 'routes/users')),
     mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/loginapp');
+mongoose.connect(process.env.MONGODB_URI);
 let db = mongoose.connection;
 
 app.use(expressValidator({

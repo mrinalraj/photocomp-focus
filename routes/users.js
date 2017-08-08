@@ -57,7 +57,7 @@ router.post('/register', (req, res) => {
                 if (err) throw err;
                 console.log(user);
             });
-            req.flash('success_msg', 'You are now registered and can login to upload photos')
+            req.flash('success_msg', 'You are now registered and can login to upload photos. Your Id is '+idno)
 
             res.redirect('/users/upload/' + idno)
         }

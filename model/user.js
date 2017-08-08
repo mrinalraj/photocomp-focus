@@ -3,8 +3,8 @@ var bcrypt = require('bcryptjs');
 
 // User Schema
 var UserSchema = mongoose.Schema({
-    idno:{
-        type:String
+    idno: {
+        type: String
     },
     name: {
         type: String
@@ -36,9 +36,9 @@ module.exports.createUser = function (newUser, callback) {
     });
 }
 
-module.exports.getAll=function(){
-    return User.findOne({},(err,result)=>{
-        if(err) throw err;
+module.exports.getAll = function () {
+    return User.findOne({}, (err, result) => {
+        if (err) throw err;
         return result;
     })
 }
