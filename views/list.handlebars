@@ -1,0 +1,59 @@
+<div class="method" id="hidden" style="display:none">
+        <div class="row margin-0 list-header hidden-sm hidden-xs">
+            <div class="col-md-4"><div class="header">ID</div></div>
+            <div class="col-md-3"><div class="header">Name</div></div>
+            <div class="col-md-1"><div class="header">Year</div></div>
+            <div class="col-md-2"><div class="header">Phone</div></div>
+            <div class="col-md-2"><div class="header">Email</div></div>
+        </div>
+
+        {{#if obj}}
+        {{#each obj}}
+        <div class="row margin-0">
+            <div class="col-md-4">
+                <div class="cell">
+                    {{id}}
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="cell">
+                    {{name}}
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="cell">
+                    {{year}}
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    {{phone}}
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    {{email}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+        <br>
+        <br>
+</div>
+
+        <script>
+            function validate(){
+                let div=document.getElementById("hidden")
+                //div.style.display="none";
+                let answer=prompt("Hello Admin! May i have the passphrase please?")
+                if(answer==='lemons'){
+                    div.style.display="block";
+                }
+                else{
+                    alert("I fear I won't be able to let you in")
+                }
+            }
+            window.onload=validate
+        </script>
